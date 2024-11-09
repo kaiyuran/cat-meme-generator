@@ -1,9 +1,6 @@
-// const canvas = document.getElementById("ImageCanvas");
-// const canv = canvas.getContext("2d");
 function changeText() {
-    let catText = document.getElementById("userInput").value.split("\n")
-    console.log(catText);
-    // let catText = document.getElementById("userInput").value;
+    var catText = document.getElementById("userInput").value.split("\n")
+    // console.log(catText);
     return catText;
 }
 
@@ -12,19 +9,26 @@ function getImage() {
     const image = new Image();
     image.src = `CAT\\CAT_${imageNum}.jpg`;
     // document.getElementById("test").src = image.src;
-
-    // console.log("dimensions",image.naturalWidth, image.naturalHeight);
     return image;
 }
 
 function generateMeme() {
     text = changeText();
-    image = getImage();
+    if (document.getElementById("imgURL").value == "") {
+        image = getImage();
+    }
+    else {
+        image = new Image();
+        image.src = document.getElementById("imgURL").value;
+        image.onerror = function() {
+            alert("Invalid URL");
+        }
+    };
+
     var frame = document.getElementById('ImageCanvas');
     var canvas = frame.getContext('2d');
     // console.log(image);
     // console.log(canvas);
-    // console.log(canvas)
     
     let lineMargin = 80;
     image.onload = function() { //buffer to let image load. This took too long to figure out...

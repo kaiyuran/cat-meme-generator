@@ -8,9 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Type your meme caption</p>
+    <div class="container">
+        <img src="leftCat.png" alt="Left Image">
+        <h1>CAT MEME GENERATOR!</h1>
+        <img src="rightCat.png" alt="Left Image">
+    </div>
     <textarea id="userInput" placeholder="MEMETEXT" oninput="changeText()"></textarea>
-    <!-- <input type="text" id="userInput" placeholder="MEMETEXT" oninput="changeText()"> -->
+    <input type="text" id="imgURL" placeholder="img Source Url">
     <button onclick="generateMeme()">GENERATE MEME</button>
     <canvas id="ImageCanvas" width="500" height="500"></canvas>
     <img id="test">

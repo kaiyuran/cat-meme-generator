@@ -1,9 +1,24 @@
+body {
+    background: content-box radial-gradient(rgb(255, 149, 170), rgb(215, 244, 255));;
+}
+
 canvas {
     border: 1px solid black;
     /* width: 50%; */
 }
-p {
-    font-size: 20px;
+.container h1 {
+    font-size: 40px;
     font-family: Arial;
     color: rgb(252, 74, 29);
+    text-align: center;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between images and text */
+    padding: 20px;
+}
+.container img {
+    width: 7%;
 }

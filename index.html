@@ -8,15 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="title">
         <img src="leftCat.png" alt="Left Image">
         <h1>CAT MEME GENERATOR!</h1>
         <img src="rightCat.png" alt="Left Image">
-    </div>
-    <textarea id="userInput" placeholder="MEMETEXT" oninput="changeText()"></textarea>
+    </div class="inputs">
+    <div class="inputs">
+    <textarea id="userInput" placeholder="MEMETEXT" oninput="changeText()">HEHEHEHA</textarea>
     <input type="text" id="imgURL" placeholder="img Source Url">
     <button onclick="generateMeme()">GENERATE MEME</button>
-    <canvas id="ImageCanvas" width="500" height="500"></canvas>
-    <img id="test">
+    </div>
+    <canvas id="ImageCanvas" ></canvas>
+    <!-- <img id="test"> -->
 </body>
 </html>

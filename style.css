@@ -6,19 +6,42 @@ canvas {
     border: 1px solid black;
     /* width: 50%; */
 }
-.container h1 {
-    font-size: 40px;
-    font-family: Arial;
-    color: rgb(252, 74, 29);
-    text-align: center;
-}
-.container {
+
+.title {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px; /* Space between images and text */
     padding: 20px;
 }
-.container img {
+
+.title h1 {
+    font-size: 40px;
+    font-family: Arial;
+    color: rgb(252, 74, 29);
+    text-align: center;
+}
+
+.title img {
     width: 7%;
+}
+
+.inputs {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    /* opacity: 0.1 */
+    ;
+    margin-bottom: 50px;
+}
+canvas {
+    border: 1px solid black;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+
+    /* width: 50%; */
 }

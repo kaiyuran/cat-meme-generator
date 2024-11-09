@@ -1,0 +1,9 @@
+canvas {
+    border: 1px solid black;
+    /* width: 50%; */
+}
+p {
+    font-size: 20px;
+    font-family: Arial;
+    color: rgb(252, 74, 29);
+}

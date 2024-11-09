@@ -37,9 +37,18 @@ canvas {
     ;
     margin-bottom: 50px;
 }
+
+.canvasContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
 canvas {
     border: 1px solid black;
-    justify-content: center;
+    /* justify-content: center; */
     width: 500px;
     height: 500px;
 

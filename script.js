@@ -1,7 +1,9 @@
 // const canvas = document.getElementById("ImageCanvas");
 // const canv = canvas.getContext("2d");
 function changeText() {
-    let catText = document.getElementById("userInput").value;
+    let catText = document.getElementById("userInput").value.split("\n")
+    console.log(catText);
+    // let catText = document.getElementById("userInput").value;
     return catText;
 }
 
@@ -24,15 +26,18 @@ function generateMeme() {
     // console.log(canvas);
     // console.log(canvas)
     
+    let lineMargin = 80;
     image.onload = function() { //buffer to let image load. This took too long to figure out...
-        console.log(this.width + 'x' + this.height);
+        // console.log(this.width + 'x' + this.height);
         frame.width = this.width;
         frame.height = this.height;
         canvas.drawImage(this, 0,0);
         canvas.font = "70px Impact";
         canvas.fillStyle = "white";
         canvas.strokeStyle = "black";
-        canvas.fillText(text,10,80, frame.width-20);
+        for (let i = 0; i < text.length; i++) {
+            canvas.fillText(text[i],10,lineMargin * (i+1), frame.width-20);
+        }
     }
     // console.log(canvas);
 }

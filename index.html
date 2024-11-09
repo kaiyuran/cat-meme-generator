@@ -9,7 +9,8 @@
 </head>
 <body>
     <p>Type your meme caption</p>
-    <input type="text" id="userInput" placeholder="" oninput="changeText()">
+    <textarea id="userInput" placeholder="MEMETEXT" oninput="changeText()"></textarea>
+    <!-- <input type="text" id="userInput" placeholder="MEMETEXT" oninput="changeText()"> -->
     <button onclick="generateMeme()">GENERATE MEME</button>
     <canvas id="ImageCanvas" width="500" height="500"></canvas>
     <img id="test">

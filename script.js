@@ -1,5 +1,8 @@
+
 const jsConfetti = new JSConfetti()
 console.log(jsConfetti)
+
+var catSound = new Audio('resources\\catSound.wav');
 
 function changeTopText() {
     var topText = document.getElementById("topText").value.split("\n")

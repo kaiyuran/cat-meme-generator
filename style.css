@@ -2,6 +2,11 @@ body {
     background: content-box radial-gradient(rgb(255, 149, 170), rgb(215, 244, 255));;
 }
 
+.mainContent {
+    margin: 0 17%;
+    padding: 20px;
+}
+
 canvas {
     border: 1px solid black;
     /* width: 50%; */
@@ -23,7 +28,7 @@ canvas {
 }
 
 .title img {
-    width: 7%;
+    width: 20%;
 }
 
 .inputs {
@@ -34,23 +39,46 @@ canvas {
     gap: 20px;
     padding: 20px;
     /* opacity: 0.1 */
-    ;
-    margin-bottom: 50px;
 }
 
 .canvasContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
 }
 
 canvas {
     border: 1px solid black;
-    /* justify-content: center; */
     width: 500px;
     height: 500px;
 
     /* width: 50%; */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 15%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.leftSidebar {
+    left: 0;
+}
+.rightSidebar {
+    right: 0;
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }

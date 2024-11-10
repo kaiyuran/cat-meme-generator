@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="title">
-        <img src="leftCat.png" alt="Left Image">
-        <h1>CAT MEME GENERATOR!</h1>
-        <img src="rightCat.png" alt="Left Image">
-    </div class="inputs">
-    <div class="inputs">
-    <textarea id="userInput" placeholder="MEMETEXT" oninput="changeText()">HEHEHEHA</textarea>
-    <input type="text" id="imgURL" placeholder="img Source Url">
-    <button onclick="generateMeme()">GENERATE MEME</button>
+    <div class="mainContent">
+        <div class="title">
+            <a href="https://www.youtube.com/watch?v=2yJgwwDcgV8"><img src="leftCat.png" alt="Brown Cat"></a>
+            <h1>CAT MEME GENERATOR!</h1>
+            <img src="rightCat.png" alt="Cat Tree">
+        </div class="inputs">
+
+        <div class="inputs">
+            <textarea id="topText" placeholder="MEMETEXT" oninput="changeTopText()">Top Text</textarea>
+            <textarea id="botText" placeholder="MEMETEXT" oninput="changeBotText()">Bottom Text</textarea>
+            <input type="text" id="imgURL" placeholder="Optional Image Source Url">
+            <button onclick="generateMeme()">GENERATE MEME</button>
+            <button id="downloadBtn" onclick="downloadMeme()">Download Canvas as Image</button>
+        </div>
+
+        <div class="canvasContainer">
+            <canvas id="ImageCanvas" ></canvas>
+        </div>
     </div>
-    <div class="canvasContainer">
-    <canvas id="ImageCanvas" ></canvas>
+
+    <div class="sidebar leftSidebar">
+        <img src="sidebar.jpg" alt="Treehouse Cat Tree">
     </div>
-    <!-- <img id="test"> -->
+
+    <div class="sidebar rightSidebar">
+        <img src="sidebar.jpg" alt="Treehouse Cat Tree">
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script> <!-- from https://www.npmjs.com/package/js-confetti -->
+    <script src="script.js"></script>
 </body>
 </html>

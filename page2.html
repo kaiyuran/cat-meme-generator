@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page2.css">
+    <script src="script2.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="goBack">
+        <a href="page1.html"><img id = "backButton" src="resources\arrow.png"></a>
+        <p>Go Back Home</p>
+    </div>
+    <div class="title">
+        <h1>CAT Playground!!!</h1>
+        <div class="subheading">
+            <p>Watch Cat Videos!!!</p>
+            <button onclick="playVideo()">Play New Video</button>
+        </div>
+    </div>
+    <video id="myVideo" width="600" height="500" controls>
+        <source id="videoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    background: content-box radial-gradient(rgb(86, 196, 132), rgb(168, 108, 176));;
+}
+
+
+.goback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto; 
+    width: auto; 
+    color: rgb(188, 43, 17);
+}
+
+#backButton {
+
+    height: auto; 
+    width: auto; 
+    max-width: 75px; 
+    max-height: 75px;
+    opacity: 1;
+}
+
+.title {
+    color: rgb(255, 149, 67);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.subheading {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}

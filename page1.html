@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="page1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContent">
+        <div class="title">
+            <a href="https://www.youtube.com/watch?v=2yJgwwDcgV8"><img src="resources\leftCat.png" alt="Brown Cat"></a>
+            <h1>CAT MEME GENERATOR!</h1>
+            <a href="page2.html"><img src="resources\rightCat.png" alt="Cat Tree"></a>
+        </div class="inputs">
+
+        <div class="inputs">
+            <textarea id="topText" placeholder="MEMETEXT" oninput="changeTopText()">Top Text</textarea>
+            <textarea id="botText" placeholder="MEMETEXT" oninput="changeBotText()">Bottom Text</textarea>
+
+            <label for="textColour">What Colour?</label>
+            <select name="textColour" id="textColour" onchange="changeTextColour()">
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+                <option value="pink">Pink</option>
+                <option value="brown">Brown</option>
+                <option value="grey">Grey</option>
+
+            <input type="text" id="imgURL" placeholder="Optional Image Source Url">
+            <button onclick="generateMeme()">GENERATE MEME</button>
+            <button id="downloadBtn" onclick="downloadMeme()">Download Canvas as Image</button>
+        </div>
+
+        <div class="canvasContainer">
+            <canvas id="ImageCanvas" ></canvas>
+        </div>
+    </div>
+
+    <div class="sidebar leftSidebar">
+        <img src="resources\sidebar.jpg" alt="Treehouse Cat Tree">
+    </div>
+
+    <div class="sidebar rightSidebar">
+        <img src="resources\sidebar.jpg" alt="Treehouse Cat Tree">
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script> <!-- from https://www.npmjs.com/package/js-confetti -->
+    <script src="script1.js"></script>
+</body>
+</html>

@@ -19,7 +19,6 @@ function getImage() {
     const image = new Image();
     image.src = `CAT\\CAT_${imageNum}.jpg`;
     // image.src = "test500.png"
-    // document.getElementById("test").src = image.src;
     return image;
 }
 
@@ -31,7 +30,6 @@ function generateMeme() {
     }
     else {
         image = new Image();
-        // img.crossOrigin = "anonymous";
         image.src = document.getElementById("imgURL").value;
         image.onerror = function() {
             alert("Invalid URL");
@@ -68,17 +66,15 @@ function generateMeme() {
 }
 
 function downloadMeme() {
-    // jsConfetti.addConfetti({
-    //     emojis: ['🐈', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '😿', '😾', '🐱', '🐈‍⬛']
-    // });
-    // catSound.play();
+    jsConfetti.addConfetti({
+        emojis: ['🐈', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '😿', '😾', '🐱', '🐈‍⬛']
+    });
+    catSound.play();
 
     var canvas = document.getElementById('ImageCanvas');
     var image = canvas.toDataURL("image/jpeg");
     var link = document.createElement('a');
     link.href = image;
     link.download = "meme.jpeg";
-    // link.onload = function() {
     link.click();
-    // }
 }
